@@ -3,7 +3,7 @@ function errorHandler(err, req, res, _next) {
   const errorCode = err.errorCode || 'INTERNAL_ERROR';
   const message = err.message || 'An unexpected error occurred';
 
-  console.error(`[${req.requestId}] Error: ${message}`);
+  console.error(`[${req.requestId}] Ошибка: ${message}`);
 
   res.status(statusCode).json({
     error: errorCode,

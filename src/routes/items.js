@@ -14,7 +14,7 @@ router.get('/', (req, res) => {
 router.get('/:id', (req, res, next) => {
   const car = carStore.getById(req.params.id);
   if (!car) {
-    const err = new Error(`Car with id ${req.params.id} not found`);
+    const err = new Error(`Неверно указан id: автомобиль с id ${req.params.id} не найден`);
     err.statusCode = 404;
     err.errorCode = 'NOT_FOUND';
     return next(err);

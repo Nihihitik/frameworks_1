@@ -4,7 +4,7 @@ function timing(req, res, next) {
   res.on('finish', () => {
     const duration = Date.now() - start;
     console.log(
-      `[${req.requestId}] ${req.method} ${req.originalUrl} ${res.statusCode} - ${duration}ms`
+      `[${req.requestId}] ${req.method} ${req.originalUrl} — статус: ${res.statusCode} — время: ${duration}мс`
     );
   });
 
